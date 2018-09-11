@@ -76,9 +76,12 @@
     #photoAndOtherDetailsContainer{
         display: flex;
         border: 1px solid gray;
+        min-height: 185px;
     }
     #photoContainer{
         margin: 11PX;
+        width: 350px;
+        text-align: center;
     }
     #reset_instruction{
         position: relative;
@@ -177,8 +180,7 @@
                 "<tr>" +  "<td>" + (i + 1) + "</td>" +"<td class='productName'>" +  thisJsonObj.name + "</td>" +  
                 "<td>" + thisJsonObj.qt + " <i class='fas fa-exclamation-circle'></i>" + "</td>" + "</tr>";
             }
-            // var productNames = document.getElementsByClassName("productName");
-            // productNames.addEventListener("click", showDetails);
+
         }else if(reverseOrNot === true && getThree === true){
             for(var i = 0; i < 3; i++){
                 var thisJsonObj = arrOfJsonObjs[i];
@@ -186,8 +188,6 @@
                 "<tr>" +  "<td>" + (i + 1) + "</td>" +"<td class='productName'>" +  thisJsonObj.name + "</td>" +  
                 "<td>" + thisJsonObj.qt + "</td>" + "</tr>";
             }
-            // var productNames = document.getElementsByClassName("productName");
-            // productNames.addEventListener("click", showDetails);
         }
     }
 
@@ -229,10 +229,7 @@
         writeTableWithJson( json_allItemsData, true);
         writeTableWithJson( json_allItemsData, true, true);
         var productNames = document.getElementsByClassName("productName");
-        // for(var i = 0; i < productNames.length; i ++){
-        //     var thisProductName = productNames[i].innerHTML;
-        //     console.log(thisProductName);
-        // }
+
         for(var i = 0; i < productNames.length; i ++){
             var thisProductName = productNames[i];
             thisProductName.addEventListener("click", showDetails);
@@ -244,23 +241,19 @@
 
     function showDetails(){
         var productName = this.innerHTML;
-        console.log(productName);
         var json = "";
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if(xhr.readyState === 4 && xhr.status === 200){
                 json = xhr.responseText;
-                //name`, `make`, `description`, `price per unit`, 
-                console.log(json);
                 var obj = JSON.parse(json);
                 var img_url = obj.img_url;
                 var name = obj.name;
                 var make = obj.make;
                 var description = obj.description;
                 var price = obj["price per unit"];
-                console.log(img_url);
                 photoContainer.innerHTML = "";
-                photoContainer.innerHTML += '<img id="photo" src="' + img_url +  '">';
+                photoContainer.innerHTML += '<img id="photo" src="' + img_url +  '" width="200px">';
                 otherDetails.innerHTML = "";
                 otherDetails.innerHTML += "<p>Name : " + name + "</p>";
                 otherDetails.innerHTML += "<p>Brand: " + make + "</p>";
@@ -268,9 +261,7 @@
             }
         }
         xhr.open("POST", "getDetails.php");
-        // xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.send('{"productName":' + '"' + productName + '"}');
-        // xhr.send("productName=" + productName);
     }
 
     var resetButton = document.getElementById("resetButton");
