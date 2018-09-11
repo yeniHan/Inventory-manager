@@ -14,7 +14,7 @@ Functionalities:
 
 2)Lists of the 3 most stocked items and the 3 least stocked items(List_02, List_03)
   The lack of particular items can be a very important issue to manage stocks.
-  * In the 3 least stocked item list, items are listed with a warning sign.
+  In the 3 least stocked item list, items are listed with a warning sign.
 
 2)Detail box:
   When a user clicks the name of any item in any list, 
