@@ -1,19 +1,29 @@
-"Inventory manager" is my first work using API technology 
-I created this while learning in W-coidng academy. 
+
+<<"Inventory manager">>
+
+ "Inventory manager" is my first work using API and PDO technology.
+ I created this app while learning in W-coidng academy in Jun of 2018. 
+
 
 Functionalities:
+
 1)List of all items(List_01) and "reversing the order" functionality.
-  The list of all items arranged by quantity by default.
-  But, by clicking "Reverse" button, a user can reverse the order of the items.
+   The list of all items arranged by quantity by default.
+   But, by clicking "Reverse" button, a user can reverse the order of the items.
 
-
-  provide the lists to show the stock status of the items
-  * "Standartd time": (Default) The time when a user came to the page at first.
 
 2)Lists of the 3 most stocked items and the 3 least stocked items(List_02, List_03)
   The lack of particular items can be a very important issue to manage stocks.
   * In the 3 least stocked item list, items are listed with a warning sign.
 
-2)
+2)Detail box:
+  When a user clicks the name of any item in any list, 
+  the user can read the information about the item. 
+
+3)Reseting the data to the latest one
+  All data for every lists are provided based on "Standard time"(on the top of the page).
+  "Standard time" is set to the time when a user came to the page at first by default.
+  However, If a user resets "Standard time" by clicking "Reset" button, the data in the app will be updated by the latest data. 
+
 
  
