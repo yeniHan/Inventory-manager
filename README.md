@@ -1,11 +1,10 @@
 
-<<"Inventory manager">>
+<h1>Inventory manager</h1>
 
- "Inventory manager" is my first work using API and PDO technology.
- I created this app while learning in W-coidng academy in Jun of 2018. 
+<h6>A simple application for stock management.</h6>
 
 
-Functionalities:
+<h4>Functionalities</h4>
 
 1)List of all items(List_01) and "reversing the order" functionality.
    The list of all items arranged by quantity by default.
