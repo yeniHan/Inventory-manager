@@ -1,13 +1,13 @@
 
 <h1>Inventory manager</h1>
 
-<h6>A simple application for stock management.</h6>
+<h5>A simple application for stock management.</h5>
 
 <div>
    <img src="Inventory_manager.png" width="800px"/>
 </div>
 
-<h4>Functionalities</h4>
+<h3>Functionalities</h3>
 
 1. List of all items(List_01) and "reversing the order" functionality. <br/>
    The list of all items arranged by quantity by default.<br/>
